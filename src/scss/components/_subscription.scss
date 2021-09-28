@@ -1,0 +1,156 @@
+.subscription {
+  position: relative;
+  padding-bottom: 175px;
+
+  .content-wrapper {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 153px;
+      height: 166px;
+      left: calc(100% - 45px);
+      top: calc(100% - 96px);
+      background: url(../images/plus_grid.svg) no-repeat;
+    }
+  }
+
+  &_icon {
+    position: absolute;
+    top: -13px;
+    right: -29px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  &_block {
+    position: relative;
+    background-color: #f9f7fe;
+    border-radius: 129px 20px 20px 20px;
+    padding: 80px 120px;
+    flex-wrap: wrap;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      opacity: 0.1;
+    }
+
+    &:before {
+      left: 19px;
+      bottom: 0;
+      width: 390px;
+      height: 273px;
+      background: url(../images/circles_1.png) no-repeat;
+    }
+
+    &:after {
+      right: 0;
+      top: 0;
+      width: 197px;
+      height: 273px;
+      background: url(../images/circles_2.png) no-repeat;
+    }
+  }
+
+  form {
+    display: flex;
+    max-width: 625px;
+    margin: 66px auto 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  input {
+    height: 68px;
+    padding-left: 66px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 66px;
+    border: none;
+    position: relative;
+    width: 420px;
+    margin-right: 24px;
+    outline: none;
+    background: #fff url(../images/email_icon.svg) 31px center no-repeat;
+  }
+
+  .button__orange {
+    height: 68px;
+    width: 180px;
+    color: #fff;
+    line-height: 68px;
+    background: linear-gradient(180deg, #ff946d 0%, #ff7d68 50%, #ff946d 100%);
+    background-size: 100% 400%;
+    background-position: 0 0;
+
+    &:hover {
+      background-position: 0 50%;
+    }
+  }
+
+  @include respond-to("small") {
+    padding-bottom: 80px;
+
+    .content-wrapper:after {
+      display: none;
+    }
+
+    &_icon {
+      width: 50px;
+      height: 50px;
+      right: -15px;
+    }
+
+    &_block {
+      width: 100%;
+      padding: 50px 40px;
+      border-radius: 80px 20px 20px 20px;
+      isolation: isolate;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    form {
+      margin-top: 30px;
+      display: block;
+    }
+
+    input {
+      width: 375px;
+      padding-left: 50px;
+      background-position: 15px center;
+    }
+  }
+
+  @include respond-to("very-small") {
+    &_block {
+      padding: 40px 30px;
+      border-radius: 20px;
+    }
+
+    input {
+      width: 100%;
+      line-height: 60px;
+      height: 60px;
+      padding-left: 50px;
+      background-position: 15px center;
+    }
+
+    .button__orange {
+      display: block;
+      width: 100%;
+      height: 60px;
+      line-height: 60px;
+      font-size: 16px;
+      margin: 15px auto 0;
+    }
+  }
+}

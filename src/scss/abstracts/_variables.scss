@@ -1,0 +1,20 @@
+// Color
+$dark-text: #181e4b;
+$text-color: #5e6282;
+$header-clr: #39425d;
+
+// media
+$breakpoints: (
+  "very-small": (
+    max-width: 640px,
+  ),
+  "small": (
+    max-width: 768px,
+  ),
+  "medium": (
+    max-width: 1025px,
+  ),
+  "large": (
+    max-width: 1180px,
+  ),
+);
